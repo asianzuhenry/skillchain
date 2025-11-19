@@ -1,0 +1,125 @@
+
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillChain - Home</title>
+  <link rel="stylesheet" href="/styles/navbar.css">
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body> 
+<!-- Navbar --> 
+<!-- Include navbar.html content here -->  
+<nav class="nav-links">
+    <a href="/">Home</a>
+    <a href="/explore">Explore</a>
+    <a href="/library">Library</a>
+    <a href="/create">Create</a>
+    <a href="/inbox">Inbox</a>
+    <a href="/account">Account</a>
+    <section class="page-links flex justify-center gap-4 mt-6 flex-wrap">
+  <a href="/stats" class="nav-item flex items-center justify-center px-6 py-3 bg-indigo-500 text-white font-bold rounded-lg shadow-md hover:bg-yellow-400 hover:text-black transition">
+    Stats
+  </a>
+  <a href="/leaderboard" class="nav-item flex items-center justify-center px-6 py-3 bg-indigo-500 text-white font-bold rounded-lg shadow-md hover:bg-yellow-400 hover:text-black transition">
+    Leaderboard
+  </a>
+</section>
+  </nav>
+  <!-- Hero Section -->  <section class="hero bg-gradient-to-b from-indigo-600 to-purple-700 text-white text-center py-24 px-6">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Welcome to SkillChain</h1>
+    <p class="text-xl max-w-3xl mx-auto opacity-90">Discover lessons, create content, earn rewards, and connect with the global learning community.</p>
+  </section>  <!-- Featured Lessons Section -->  <section class="py-16 px-6 max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold mb-8">Featured Lessons</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card p-6 rounded-xl shadow bg-white">
+        <h3 class="font-semibold text-xl mb-2">Introduction to Blockchain</h3>
+        <p class="text-gray-700">Learn the fundamentals of blockchain technology and how it powers decentralized applications.</p>
+      </div>
+      <div class="card p-6 rounded-xl shadow bg-white">
+        <h3 class="font-semibold text-xl mb-2">Python for Beginners</h3>
+        <p class="text-gray-700">Start your programming journey with Python and build practical projects from scratch.</p>
+      </div>
+      <div class="card p-6 rounded-xl shadow bg-white">
+        <h3 class="font-semibold text-xl mb-2">AI & Machine Learning Basics</h3>
+        <p class="text-gray-700">Understand the basics of AI and ML and how to apply them to solve real-world problems.</p>
+      </div>
+    </div>
+  </section>  <!-- Recent Activities Section -->  <section class="py-16 px-6 max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold mb-8">Recent Activities</h2>
+    <ul class="list-disc ml-6 space-y-2 text-lg">
+      <li>John completed "Python for Beginners"</li>
+      <li>Mary forked "AI & Machine Learning Basics"</li>
+      <li>Alex created a new lesson "Web3 Fundamentals"</li>
+    </ul>
+  </section>  <!-- CTA Section -->  <section class="py-20 text-center bg-indigo-700 text-white">
+    <h2 class="text-4xl font-bold mb-4">Start Learning Today</h2>
+    <p class="text-lg mb-6">Join SkillChain and be part of the decentralized learning revolution.</p>
+    <a href="/signup" class="bg-white text-indigo-700 px-10 py-4 rounded-2xl font-bold shadow-lg hover:scale-105 transition cursor-pointer">Create Account</a>
+  </section>
+    <link rel="stylesheet" href="/styles/style.css">
+  
+  <div id="navbar"></div>
+
+<script>
+  fetch("/templates/navbar.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("navbar").innerHTML = data);
+</script>
+<nav class="bottom-nav fixed bottom-0 left-0 w-full flex justify-around items-center py-3 z-50">
+  <a href="/" class="nav-item flex flex-col items-center text-gray-400 hover:text-white transition duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9 9 9M4 10v10h16V10"/>
+    </svg>
+    <span class="text-sm">Home</span>
+  </a>
+  <a href="/account" class="nav-item flex flex-col items-center text-gray-400 hover:text-white transition duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A10.001 10.001 0 0112 15c2.386 0 4.568.832 6.121 2.195M12 12a4 4 0 100-8 4 4 0 000 8z"/>
+    </svg>
+    <span class="text-sm">Account</span>
+  </a>
+  <a href="/explore" class="nav-item flex flex-col items-center text-gray-400 hover:text-white transition duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4 4 4M4 17h16"/>
+    </svg>
+    <span class="text-sm">Explore</span>
+  </a>
+  <a href="/inbox" class="nav-item flex flex-col items-center text-gray-400 hover:text-white transition duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 6v6"/>
+    </svg>
+    <span class="text-sm">Inbox</span>
+  </a>
+  <a href="/library" class="nav-item flex flex-col items-center text-gray-400 hover:text-white transition duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v12a2 2 0 01-2 2z"/>
+    </svg>
+    <span class="text-sm">Library</span>
+  </a>
+  <a href="/create" class="nav-item flex flex-col items-center text-gray-400 hover:text-white transition duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+    </svg>
+    <span class="text-sm">Create</span>
+  </a>
+</nav>
+
+<script>
+  const currentPage = document.body.getAttribute("data-page");
+
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+
+      // Highlight active page
+      document.querySelectorAll(".nav-item").forEach(link => {
+        if (link.dataset.page === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+</script>
+  </body>
+</html>
