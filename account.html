@@ -1,53 +1,125 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkillChain Account</title>
-  <link rel="stylesheet" href="account.css">
-  <link rel="stylesheet" href="navbar.css"/>
-  <link rel="stylesheet" href="style.css">
-  
+  <title>SkillChain - Account</title>
+  <link rel="stylesheet" href="/navbar.css">
+  <link rel="stylesheet" href="/style.css">
+  <!-- Side Menu CSS -->
+<!-- Side Menu CSS -->
+<link rel="stylesheet" href="/sub-menu.css">
 </head>
-<body><!-- ================= ACCOUNT DASHBOARD ================= -->
+<body class="bg-gray-900 text-white">
+<!-- ========== RIGHT SIDE MENU ========== -->
+<button id="menu-toggle" class="menu-toggle">☰</button>
 
-<section class="account-hero">
-  <div class="account-container">
-    <h1>Your Account</h1>
-    <p>Welcome back! Manage your profile, track your learning progress, and explore your rewards.</p><div class="account-cards">
-  <div class="card">
-    <h2>Profile</h2>
-    <p>Update personal information, password, and email preferences.</p>
-    <button>Manage Profile</button>
-  </div>
-  <div class="card">
-    <h2>Learning Progress</h2>
-    <p>View your completed lessons, achievements, and badges earned.</p>
-    <button>View Progress</button>
-  </div>
-  <div class="card">
-    <h2>Rewards & Tokens</h2>
-    <p>Track earned tokens and redeem them for rewards.</p>
-    <button>Check Rewards</button>
-  </div>
+<div id="right-side-menu" class="right-side-menu">
+    <div class="right-menu-header">
+        <h2>Menu</h2>
+        <span id="right-close-btn" class="right-close-btn">&times;</span>
+    </div>
+
+    <ul class="right-menu-items">
+        <li><a href="leaderboard.html"><span class="menu-icon">🏆</span>Leaderboard</a></li>
+        <li><a href="notifications.html"><span class="menu-icon">🔔</span>Notifications</a></li>
+        <li><a href="settings.html"><span class="menu-icon">⚙️</span>Settings</a></li>
+        <li><a href="stats.html"><span class="menu-icon">📊</span>Stats</a></li>
+        <li><a href="support.html"><span class="menu-icon">🛠️</span>Support</a></li>
+
+        <li>
+            <a href="#" class="submenu-toggle">
+                <span class="menu-icon">🎯</span>Challenges
+                <span class="submenu-arrow">▼</span>
+            </a>
+            <ul class="submenu">
+                <li><a href="daily_challenges.html">Daily Challenges</a></li>
+                <li><a href="weekly_challenges.html">Weekly Challenges</a></li>
+            </ul>
+        </li>
+
+        <li><a href="profile.html"><span class="menu-icon">👤</span>Profile</a></li>
+        <li><a href="fork.html"><span class="menu-icon">🍴</span>Fork</a></li>
+        <li><a href="rewards.html"><span class="menu-icon">💎</span>Rewards</a></li>
+        <li><a href="messages.html"><span class="menu-icon">✉️</span>Messages</a></li>
+
+        <li>
+            <a href="#" class="submenu-toggle">
+                <span class="menu-icon">👥</span>Groups
+                <span class="submenu-arrow">▼</span>
+            </a>
+            <ul class="submenu">
+                <li><a href="group_chats.html">Chats</a></li>
+                <li><a href="group_members.html">Members</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#" class="submenu-toggle">
+                <span class="menu-icon">📚</span>Courses
+                <span class="submenu-arrow">▼</span>
+            </a>
+            <ul class="submenu">
+                <li><a href="course_modules.html">Modules</a></li>
+                <li><a href="course_assignments.html">Assignments</a></li>
+            </ul>
+        </li>
+
+        <li><a href="help.html"><span class="menu-icon">❓</span>Help</a></li>
+        <li><a href="charts.html"><span class="menu-icon">📈</span>Charts</a></li>
+    </ul>
 </div>
+<!-- ========== END RIGHT SIDE MENU ========== -->
 
-<div class="logout">
-  <button> <a href="index.html">Log Out</a></button>
-</div>
 
+<!-- Optional: Auth protection -->
+
+<script src="auth.js"></script>
+
+<!-- ================= ACCOUNT DASHBOARD HERO ================= -->
+<section class="hero bg-gradient-to-b from-indigo-600 to-purple-700 text-white text-center py-24 px-6">
+  <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Welcome Back, User!</h1>
+  <p class="text-xl max-w-3xl mx-auto opacity-90">Manage your account, track your progress, and access all your lessons from here.</p>
+</section>
+
+<!-- ================= ACCOUNT INFO CARDS ================= -->
+<section class="py-16 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-6 account-cards">
+  <div class="card p-6 rounded-xl shadow bg-gray-800">
+    <h2 class="text-2xl font-semibold mb-2 text-white">Profile</h2>
+    <p class="text-gray-300">Update personal information, password, and email preferences.</p>
+    <button onclick="window.location.href='html_files/profile.html'" class="mt-4 btn">Manage Profile</button>
+  </div>
+  <div class="card p-6 rounded-xl shadow bg-gray-800">
+    <h2 class="text-2xl font-semibold mb-2 text-white">Learning Progress</h2>
+    <p class="text-gray-300">View completed lessons, achievements, and badges earned.</p>
+    <button onclick="window.location.href='html_files/challenges.html'" class="mt-4 btn">View Progress</button>
+  </div>
+  <div class="card p-6 rounded-xl shadow bg-gray-800">
+    <h2 class="text-2xl font-semibold mb-2 text-white">Rewards & Tokens</h2>
+    <p class="text-gray-300">Track earned tokens and redeem them for rewards.</p>
+    <button onclick="window.location.href='html_files/rewards.html'" class="mt-4 btn">Check Rewards</button>
+  </div>
+  <div class="card p-6 rounded-xl shadow bg-gray-800">
+    <h2 class="text-2xl font-semibold mb-2 text-white">Settings</h2>
+    <p class="text-gray-300">Configure account settings, notifications, and privacy preferences.</p>
+    <button onclick="window.location.href='html_files/profile.html'" class="mt-4 btn">Settings</button>
   </div>
 </section>
 
-<script src="script.js"></script>
-<section class="page-links flex justify-center gap-4 mt-6 flex-wrap">
-  <a href="profile.html" class="nav-item flex items-center justify-center px-6 py-3 bg-indigo-500 text-white font-bold rounded-lg shadow-md hover:bg-yellow-400 hover:text-black transition">
-    Profile
-  </a>
-  <a href="help.html" class="nav-item flex items-center justify-center px-6 py-3 bg-indigo-500 text-white font-bold rounded-lg shadow-md hover:bg-yellow-400 hover:text-black transition">
-    Help
-  </a>
+<!-- ================= CTA SECTION ================= -->
+<section class="py-20 text-center bg-indigo-700 text-white">
+  <h2 class="text-4xl font-bold mb-4">Keep Learning and Earning!</h2>
+  <p class="text-lg mb-6">Explore new lessons, create content, and maximize your rewards.</p>
+
 </section>
-<!-- navbar.html -->
+
+
+<!-- ================= LOGOUT BUTTON ================= -->
+<div class="logout text-center mt-10">
+  <button class="btn"><a href="index.html" class="text-white">Log Out</a></button>
+</div>
+
+<!-- ================= NAVBAR ================= -->
 <nav class="bottom-nav fixed bottom-0 left-0 w-full flex justify-around items-center py-3 z-50">
   <a href="home.html" class="nav-item flex flex-col items-center text-gray-400 hover:text-white transition duration-300">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -87,7 +159,7 @@
   </a>
 </nav>
 
-<!-- Active page highlighting -->
+<!-- ================= ACTIVE PAGE HIGHLIGHT ================= -->
 <script>
   const navItems = document.querySelectorAll('.bottom-nav .nav-item');
   const currentPage = window.location.pathname.split("/").pop();
@@ -99,5 +171,9 @@
     }
   });
 </script>
+
+<script src="script.js"></script>
+<!-- Side Menu JS -->
+<script src="js/sub-menu.js"></script>
 </body>
 </html>

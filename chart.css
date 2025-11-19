@@ -1,0 +1,130 @@
+/* General layout */
+body {
+  background: #dfe7f2;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Chat box container */
+.chat-container {
+  width: 100%;
+  max-width: 420px;
+  height: 94vh;
+  background: #ffffff;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Header */
+.chat-header {
+  background: linear-gradient(45deg, #4c6ef5, #7b2ff7);
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.back-btn {
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Messages area */
+.messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background: #f7f7f5;
+}
+
+/* Message bubbles */
+.bubble {
+  max-width: 75%;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  background: #e1ffc7;
+  animation: fadeIn 0.3s ease;
+}
+
+.bubble.me {
+  margin-left: auto;
+  background: #4c6ef5;
+  color: white;
+}
+
+/* Timestamp */
+.timestamp {
+  font-size: 10px;
+  opacity: 0.7;
+  text-align: right;
+  margin-top: 4px;
+}
+
+/* Bottom input bar */
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  gap: 8px;
+}
+
+/* File button */
+.file-btn {
+  background: #e0e0e0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Text input */
+input[type="text"], input#text {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: #f2f2f2;
+  outline: none;
+}
+
+/* Send button */
+.send-btn {
+  background: #4c6ef5;
+  color: white;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .chat-container {
+    height: 100vh;
+    border-radius: 0;
+  }
+}
