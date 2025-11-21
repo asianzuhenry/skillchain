@@ -1,11 +1,12 @@
 /* Bottom Navbar */
+@import url("./style.css");
 .bottom-nav {
-  position: fixed;
-  bottom: 0;
+  /* position: fixed; */
+  top: 0;
   left: 0;
   width: 100%;
   backdrop-filter: blur(12px);
-  background: rgba(99,102,241,0.85); /* indigo gradient effect */
+  /* background: var(--color-); indigo gradient effect */
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   box-shadow: 0 -4px 12px rgba(0,0,0,0.25);
@@ -15,6 +16,7 @@
   padding: 10px 0;
   z-index: 50;
   transition: background 0.4s ease, transform 0.3s ease;
+  font-size: 24px;
 }
 
 /* Nav item animations */
@@ -24,6 +26,11 @@
   align-items: center;
   color: #e0e0e0;
   transition: transform 0.3s, color 0.3s;
+  font-size: 24px;
+}
+
+.bottom-nav a {
+  font-size: 24px;
 }
 
 .bottom-nav .nav-item svg {

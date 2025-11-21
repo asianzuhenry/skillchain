@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!res.ok) throw new Error(data.message || "Registration failed");
       // Save token
       localStorage.setItem("token", data.token);
+      window.location.href = "/signin";
       return data;
     }
 
