@@ -1,3 +1,4 @@
+@import url("./style.css");
 /* Base Styles */
 body {
   font-family: Arial, sans-serif;
@@ -13,7 +14,7 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  background: linear-gradient(to bottom, #4f46e5, #9333ea);
+  /* background: linear-gradient(to bottom, #4f46e5, #9333ea); */
 }
 
 .signup-container {
@@ -36,7 +37,7 @@ body {
   font-size: 1.1rem;
   margin-bottom: 30px;
   opacity: 0.9;
-}
+}￼
 
 /* Inputs */
 .signup-form input {
@@ -45,8 +46,8 @@ body {
   margin-bottom: 15px;
   border-radius: 12px;
   border: 2px solid #e0e0e0;
-  background: rgba(255,255,255,0.1);
-  color: #ffffff;
+  background: rgba(202, 45, 45, 0.9);
+  /* color: #ffffff; */
   font-size: 1rem;
   transition: border-color 0.2s, box-shadow 0.2s;
 }

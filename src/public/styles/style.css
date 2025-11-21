@@ -6,21 +6,30 @@
   font-family: "Poppins", Arial, sans-serif;
 }
 
+:root {
+  --color-primary: #1A2421;
+  --color-secondary: #78866B;
+  --color-primary-light: #F0FFF0;
+
+}
+
 body {
-  background: linear-gradient(135deg, #0b0e16, #2b1854, #3b82f6, #6b21a8);
+  /* background: linear-gradient(135deg, #0b0e16, #2b1854, #3b82f6, #6b21a8); */
+  background-color: var(--color-primary);
   background-size: 300% 300%;
   animation: gradientFlow 12s ease infinite;
-  color: #e3e7f1;
+  color: var(--color-primary-light);
   line-height: 1.7;
   padding-bottom: 80px;
 }
 
-/* === GLOBAL ANIMATED GRADIENT === */
+/* === GLOBAL ANIMATED GRADIENT 
 @keyframes gradientFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
+} 
+  === */
 
 /* === HEADER === */
 header {
@@ -275,7 +284,7 @@ footer {
   background: #ffffff;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 25px rgba(63, 173, 201, 0.5);
   animation: slideUp 0.8s ease;
 }
 
